@@ -1,0 +1,18 @@
+.sidebar__close-button {
+    position: absolute;
+    top: 77px;
+    right: 242px;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border: 0;
+    background-color: #000;
+    background-size: cover;
+    background-image: url(../../../../public/images/side_bar_icon2.png);
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.sidebar__close-button:active {
+    transform: scale(0.90);
+}

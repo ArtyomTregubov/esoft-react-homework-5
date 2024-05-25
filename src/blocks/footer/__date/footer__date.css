@@ -1,0 +1,8 @@
+.footer__date {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 10px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #fff;
+}

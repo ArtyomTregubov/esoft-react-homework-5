@@ -1,0 +1,9 @@
+.footer__container {
+    width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    height: 150px;
+    border-radius: 0 0 20px 20px;
+    background-color: #000;
+    flex-direction: column;
+}

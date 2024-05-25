@@ -1,0 +1,8 @@
+.search__content {
+    width: 1200px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 0;
+    background-color: #cac4ff;
+}

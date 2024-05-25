@@ -1,0 +1,8 @@
+.info__similar-grid {
+    width: 1134px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(153px, 1fr));
+    grid-gap: 5px 1.65px;
+    justify-items: center;
+    margin: 0 0 50px 33px;
+}

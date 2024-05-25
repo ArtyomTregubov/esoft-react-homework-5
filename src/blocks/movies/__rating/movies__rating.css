@@ -1,0 +1,8 @@
+.movies__rating {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 70px;
+    font-family: fantasy;
+    font-size: 23px;
+    color: #0ae557;
+}

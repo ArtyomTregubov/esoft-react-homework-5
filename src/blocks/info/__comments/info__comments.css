@@ -1,0 +1,8 @@
+.info__comments {
+    display: flex;
+    flex-direction: column;
+    background-color: #c3c2c7;
+    padding: 0 0 50px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}

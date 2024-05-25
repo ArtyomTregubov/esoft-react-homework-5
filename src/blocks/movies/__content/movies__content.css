@@ -1,0 +1,8 @@
+.movies__content {
+    width: 1200px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cac4ff;
+}

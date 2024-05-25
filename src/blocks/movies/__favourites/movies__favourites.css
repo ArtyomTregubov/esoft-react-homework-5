@@ -1,0 +1,17 @@
+.movies__favourites {
+    border: 0;
+    padding: 0;
+    width: 170px;
+    height: 25px;
+    background-color: #d52121e3;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    margin: 0 0 3px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.movies__favourites:active {
+    transform: scale(0.99);
+}

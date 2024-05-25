@@ -1,0 +1,17 @@
+.search__add-button {
+    width: 88px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0 0 0 20px;
+    background-color: #b11515;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search__add-button:active {
+    transform: scale(0.99);
+}

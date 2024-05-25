@@ -1,0 +1,6 @@
+.movies__sort-container {
+    display: flex;
+    align-items: center;
+    width: 1069px;
+    margin: 0 30px 0 0;
+}

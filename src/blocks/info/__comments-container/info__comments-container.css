@@ -1,0 +1,9 @@
+.info__comments-container {
+    display: flex;
+    flex-direction: column;
+    width: 880px;
+    margin: 15px 0 0 50px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+}

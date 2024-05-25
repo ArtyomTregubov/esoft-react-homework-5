@@ -1,0 +1,8 @@
+.movies__grid {
+    width: min(100%);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(153px, 1fr));
+    grid-gap: 5px 30.65px;
+    justify-items: start;
+    margin: 0 0 50px;
+}

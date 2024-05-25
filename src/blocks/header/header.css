@@ -1,0 +1,6 @@
+.header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 0;
+}

@@ -1,0 +1,16 @@
+.movies__later {
+    border: 0;
+    padding: 0;
+    width: 170px;
+    height: 25px;
+    background-color: #25dddd;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.movies__later:active {
+    transform: scale(0.99);
+}

@@ -1,0 +1,16 @@
+.movies__sort-rating {
+    border: 0;
+    padding: 0 5px;
+    height: 30px;
+    margin: 0 0 0 8px;
+    border-radius: 5px;
+    background-color: #454874;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.movies__sort-rating:active {
+    transform: scale(0.99);
+}

@@ -1,0 +1,14 @@
+.sidebar__close-movies {    border: 0;
+    border: 0;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    margin: 0px 0 0 6px;
+    background-image: url(../../../../public/images/close_button_icon.png);
+    background-size: cover;
+    background-color: transparent;
+}
+
+.sidebar__close-movies:active {
+    transform: scale(0.90);
+}

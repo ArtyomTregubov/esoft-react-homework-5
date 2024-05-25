@@ -1,0 +1,11 @@
+.movies__description-text {
+    max-width: 440px;
+    max-height: 50px;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+}

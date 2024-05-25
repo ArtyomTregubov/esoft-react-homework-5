@@ -1,0 +1,8 @@
+.movies__description-container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 150px;
+    margin: 0 0 0 20px;
+    justify-content: space-around;
+}

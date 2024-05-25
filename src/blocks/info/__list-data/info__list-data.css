@@ -1,0 +1,11 @@
+ .info__list-data {
+    width: 697px;
+    min-height: 25px;
+    display: flex;
+    margin: 0 0 5px;
+    padding: 10px 10px 10px 0;
+    /*background-color: #d9d7f9;*/
+    font-family: 'Montserrat';
+    align-items: center;
+    border-radius: 5px;
+}

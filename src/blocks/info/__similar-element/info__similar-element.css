@@ -1,0 +1,7 @@
+.info__similar-element {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    background-color: #9899a1;
+    border-radius: 8px;
+}

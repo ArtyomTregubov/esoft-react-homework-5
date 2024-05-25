@@ -1,0 +1,15 @@
+.info__watch-button {
+    border: 0;
+    padding: 0;
+    width: 350px;
+    height: 50px;
+    background-color: #454874;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    color: #fff;
+    cursor: pointer;
+}
+
+.info__watch-button:active {
+    transform: scale(0.99);
+}
