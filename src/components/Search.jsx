@@ -1,7 +1,14 @@
 import React from "react";
 import Card from "./Card";
 
-export default function Search({firstData, setFavoriteMovies, favoriteMovies, seeLaterMovies, setSeeLaterMovies}) {
+export default function Search({
+    firstData, 
+    setFavoriteMovies, 
+    favoriteMovies, 
+    seeLaterMovies, 
+    setSeeLaterMovies,
+    movieCategories
+    }) {
 
     const [searchData, setSearchData] = React.useState([])
     const [nameValue, setNameValue] = React.useState('')
@@ -12,12 +19,12 @@ export default function Search({firstData, setFavoriteMovies, favoriteMovies, se
         
         const searchArr = [...firstData]
         
-        if(category === "Все категории" && nameValue === "") 
+        if(category === "Выбрать категорию" && nameValue === "") 
         {
             resetCategory();
         } 
         
-        else if(category ==="Все категории") 
+        else if(category ==="Выбрать категорию") 
 
         {
             const searchMovies = searchArr.filter(movie => {
@@ -78,16 +85,11 @@ export default function Search({firstData, setFavoriteMovies, favoriteMovies, se
                                     >
 
                                 <optgroup label="Категория" className="search__category">
-                                    <option defaultValue="r0" className="search__category-value">Выбрать категорию</option>
-                                    <option defaultValue="r1" className="search__category-value">Комедия</option>
-                                    <option defaultValue="r2" className="search__category-value">Ужасы</option>
-                                    <option defaultValue="r3" className="search__category-value">Боевик</option>
-                                    <option defaultValue="r4" className="search__category-value">Фантастика</option>
-                                    <option defaultValue="r5" className="search__category-value">Триллер</option>
-                                    <option defaultValue="r6" className="search__category-value">Мелодрама</option>
-                                    <option defaultValue="r7" className="search__category-value">Детектив</option>
-                                    <option defaultValue="r8" className="search__category-value">Приключения</option>
-                                    <option defaultValue="r9" className="search__category-value">Драма</option>
+
+                                {movieCategories.map((c, i) => {
+                                        return <option key={i} defaultValue={c.value} className="search__category-value">{c.category}</option>
+                                    })}
+                    
                                 </optgroup>
                             </select>
                         </p>

@@ -1,15 +1,3 @@
 .sidebar {
     display: none;
-    height: 100%;
-    width: 289px;
-    position: fixed;
-    z-index: 1;
-    top: 5px;
-    left: 73.95%;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 108px;
-    border-radius: 21px;
-    opacity: 0.93;
 }
