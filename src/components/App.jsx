@@ -11,7 +11,8 @@ import SideBar from "./SideBar";
 function App() {
 
 const [firstData, setFirstData] = React.useState([])
-const [sameFilms, setSameFilms] = React.useState(null);
+const [sameFilms, setSameFilms] = React.useState(null)
+
 const src = "http://localhost:8000/movies"
 
 async function getFilms() {
@@ -57,6 +58,51 @@ React.useEffect(() => {
   const [favoriteMovies, setFavoriteMovies] = React.useState([]);
   const [seeLaterMovies, setSeeLaterMovies] = React.useState([]);
   const [comments, setComments] = React.useState({});
+  const [isShow, onShow] = React.useState(false);
+
+  const [movieCategories, setMovieCategories] = React.useState([
+    {
+      category: "Выбрать категорию",
+      value: "r0",
+    },
+    {
+      category: "Комедия",
+      value: "r1",
+    },
+    {
+      category: "Ужасы",
+      value: "r2",
+    },
+    {
+      category: "Боевик",
+      value: "r3",
+    },
+    {
+      category: "Фантастика",
+      value: "r4",
+    },
+    {
+      category: "Триллер",
+      value: "r5",
+    },
+    {
+      category: "Мелодрама",
+      value: "r6",
+    },
+    {
+      category: "Детектив",
+      value: "r7",
+    },
+    {
+      category: "Приключения",
+      value: "r8",
+    },
+    {
+      category: "Драма",
+      value: "r9",
+    },
+  ]);
+
   
   return (
     
@@ -67,7 +113,10 @@ React.useEffect(() => {
           path="/"
             element={
               <>
-                <Header/>
+                <Header
+                isShow={isShow}
+                onShow={onShow}
+                />
                 <main>
                 
                 {firstData && <Movies
@@ -76,6 +125,7 @@ React.useEffect(() => {
                 seeLaterMovies={seeLaterMovies}
                 setSeeLaterMovies={setSeeLaterMovies}
                 firstData={firstData}
+                movieCategories={movieCategories}
                 />}
                 </main>
                 <Footer/>
@@ -84,6 +134,8 @@ React.useEffect(() => {
                 setFavoriteMovies={setFavoriteMovies}
                 seeLaterMovies={seeLaterMovies}
                 setSeeLaterMovies={setSeeLaterMovies}
+                isShow={isShow}
+                onShow={onShow}
                 />
               </>
             }
@@ -93,7 +145,10 @@ React.useEffect(() => {
           path="/search"
             element={
               <>
-                <Header/>
+                <Header
+                isShow={isShow}
+                onShow={onShow}
+                />
                 <main>
                 {firstData && <Search 
                 favoriteMovies={favoriteMovies}
@@ -101,6 +156,7 @@ React.useEffect(() => {
                 seeLaterMovies={seeLaterMovies}
                 setSeeLaterMovies={setSeeLaterMovies}
                 firstData={firstData}
+                movieCategories={movieCategories}
                 />}
                 </main>
                 <Footer/>
@@ -109,6 +165,8 @@ React.useEffect(() => {
                 setFavoriteMovies={setFavoriteMovies}
                 seeLaterMovies={seeLaterMovies}
                 setSeeLaterMovies={setSeeLaterMovies}
+                isShow={isShow}
+                onShow={onShow}
                 />
               </>
             }
@@ -118,7 +176,10 @@ React.useEffect(() => {
           path="/film/:id"
             element={
               <>
-                <Header/>
+                <Header
+                isShow={isShow}
+                onShow={onShow}
+                />
                 <main>
                 <FilmInfo 
                 comments={comments}
@@ -133,6 +194,8 @@ React.useEffect(() => {
                 setFavoriteMovies={setFavoriteMovies}
                 seeLaterMovies={seeLaterMovies}
                 setSeeLaterMovies={setSeeLaterMovies}
+                isShow={isShow}
+                onShow={onShow}
                 />
               </>
             }

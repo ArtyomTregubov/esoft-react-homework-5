@@ -1,23 +1,28 @@
 import React from "react";
 import {Link} from "react-router-dom"
 
-export default function SideBar({favoriteMovies, setFavoriteMovies, seeLaterMovies, setSeeLaterMovies}) {
+export default function SideBar({
+  favoriteMovies, 
+  setFavoriteMovies, 
+  seeLaterMovies, 
+  setSeeLaterMovies,
+  isShow,
+  onShow
+}) {
 
   function deleteMovie(arr, id, setArr) {
     const moviesWithoudDeleted = arr.filter(item => item.id !== id);
     setArr([...moviesWithoudDeleted]);
   }
 
-   function closeSideBar() {
-       document.getElementById("mySidenav").style.display = "none";
-    }
-    
-    
- 
+  function handleCloseSideBarClick() {
+    onShow(false);
+  }
+
   return (
 
-          <div className="sidebar" id="mySidenav">
-          <button className="sidebar__close-button" onClick={closeSideBar}></button>
+          <div className={ isShow ? `sidebar_opened` : `sidebar`} id="mySidenav">
+          <button className="sidebar__close-button" onClick={handleCloseSideBarClick}></button>
 
           <span className="sidebar__categories">Избранное</span>
           <ul className="sidebar__container">

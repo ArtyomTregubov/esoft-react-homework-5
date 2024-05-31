@@ -7,16 +7,15 @@ export default function CommentsBlock({comments, setComments, itemId}) {
 
     
     const addComment = (itemId, newComment, setComments) => {
+        if (newComment.trim() !== '') {
+            if (comments[itemId]) {
+                comments[itemId] = [...comments[itemId], newComment];
+            } else {
+                comments[itemId] = [newComment];
+            }
         
-        if (comments[itemId]) {
-            
-            comments[itemId] = [...comments[itemId], newComment]
-        } else {
-            
-            comments[itemId] = [newComment];
+            setComments(Object.assign({}, comments));
         }
-    
-        setComments(Object.assign({}, comments));
     };
 
 

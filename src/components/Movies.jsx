@@ -1,16 +1,22 @@
 import React from "react";
 import Card from "./Card";
 
-export default function Movies({firstData, setFavoriteMovies, favoriteMovies, seeLaterMovies, setSeeLaterMovies}) {
+export default function Movies({
+    firstData, 
+    setFavoriteMovies, 
+    favoriteMovies, 
+    seeLaterMovies, 
+    setSeeLaterMovies, 
+    movieCategories}) {
 
     const [visibleCards, setVisibleCards] = React.useState(6)
-    const [category, setCategory] = React.useState("Все категории")
+    const [category, setCategory] = React.useState("Выбрать категорию")
     const [filteredMovies, setFilteredMovies] = React.useState([]);
     const [highRating, setHighRating] = React.useState(false);
     const [secondData, setSecondData] = React.useState([])
     
     React.useEffect(() => {
-        let arr = category === "Все категории" ? [...firstData] : [...filteredMovies];
+        let arr = category === "Выбрать категорию" ? [...firstData] : [...filteredMovies];
         arr = sortMovies(arr);
         setSecondData([...arr])
       }, [firstData, filteredMovies, category]);
@@ -30,7 +36,7 @@ export default function Movies({firstData, setFavoriteMovies, favoriteMovies, se
 
     const filterMovies = (category) => {
         setCategory(category)
-        if(category ==="Все категории") {
+        if(category ==="Выбрать категорию") {
             
             return
         } else {
@@ -60,16 +66,11 @@ export default function Movies({firstData, setFavoriteMovies, favoriteMovies, se
                                     onChange={(event) => filterMovies(event.target.value) }>
                                   
                                   <optgroup label="Категории фильмов" className="movies__category">
-                                      <option defaultValue="" className="movies__category-value">Все категории</option>
-                                      <option defaultValue="r1" className="movies__category-value">Комедия</option>
-                                      <option defaultValue="r2" className="movies__category-value">Ужасы</option>
-                                      <option defaultValue="r3" className="movies__category-value">Боевик</option>
-                                      <option defaultValue="r4" className="movies__category-value">Фантастика</option>
-                                      <option defaultValue="r5" className="movies__category-value">Триллер</option>
-                                      <option defaultValue="r6" className="movies__category-value">Мелодрама</option>
-                                      <option defaultValue="r7" className="movies__category-value">Детектив</option>
-                                      <option defaultValue="r8" className="movies__category-value">Приключения</option>
-                                      <option defaultValue="r9" className="movies__category-value">Драма </option>
+
+                                  {movieCategories.map((c, i) => {
+                                        return <option key={i} defaultValue={c.value} className="movies__category-value">{c.category}</option>
+                                    })}
+
                                   </optgroup>
                               </select>
                           </p>

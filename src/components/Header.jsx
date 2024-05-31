@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Header() {
+export default function Header({isShow, onShow}) {
 
-    function openSideBar() {
-        document.getElementById("mySidenav").style.display = "block";
-    }
+    function handleShowSideBarClick() {
+        onShow(!isShow);
+      }
 
   return (
 
@@ -18,7 +18,7 @@ export default function Header() {
                   <a href="/" className="header__navigation-link">Главная</a>
                   <a href="/search" className="header__navigation-link">Поиск</a>
                   <img src="/images/search_icon.png" alt="иконка поиска" className="header__navigation-search"/>
-                  <button className="header__sidebar-buttton " onClick={openSideBar}></button>
+                  <button className="header__sidebar-buttton" onClick={handleShowSideBarClick}></button>
               </nav>
           </div>
       </header>
